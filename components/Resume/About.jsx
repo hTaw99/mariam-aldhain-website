@@ -1,4 +1,6 @@
 export default function About() {
+
+  console.log("from about")
   return (
     <p className="text-lg leading-relaxed">
       شخصية نشيطة وطموحة مع نظرة ثاقبه حاملة لمؤهلات علمية وعملية حيث تنخرط في

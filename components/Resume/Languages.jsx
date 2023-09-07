@@ -27,7 +27,7 @@ export default function Languages() {
     <div className="flex flex-col text-lg">
       {language.map((lang) => (
         <div key={lang.name} className="flex items-center gap-2">
-          <div className="">
+          <div>
             <Image
               alt={lang.name}
               width={24}

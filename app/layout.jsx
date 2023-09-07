@@ -3,6 +3,7 @@ import Topbar from "@/layout/Topbar";
 import { IBM_Plex_Sans_Arabic, Cairo } from "next/font/google";
 import Navbar from "@/layout/Navbar";
 import Footer from "@/layout/Footer";
+import { AppProvider } from "@/context/appContext";
 
 const ibm = Cairo({
   subsets: ["arabic"],
@@ -18,10 +19,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
       <body className={`${ibm.className} text-black`}>
-        <Topbar />
-        <Navbar />
-        <div className="min-h-screen relative">{children}</div>
-        <Footer />
+        <AppProvider>
+          <Topbar />
+          <Navbar />
+          <main className="min-h-screen relative">{children}</main>
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );

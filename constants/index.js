@@ -1,3 +1,4 @@
+import Complaints from "@/components/Complaints";
 import BriefcaseIcon from "@/components/Icons/Briefcase";
 import CertificateIcon from "@/components/Icons/Certificate";
 import FileIcon from "@/components/Icons/File";
@@ -8,6 +9,7 @@ import Certificates from "@/components/Resume/Certificates";
 import Experiences from "@/components/Resume/Experiences";
 import Languages from "@/components/Resume/Languages";
 import Qualifications from "@/components/Resume/Qualifications";
+import SocialMediaChannel from "@/components/SocialMediaChannel";
 
 export const navigationLinks = [
   { label: "الرئيسية", path: "/" },
@@ -58,6 +60,17 @@ export const resumeLinks = [
     label: "اللغات",
     content: <Languages />,
     icon: <GlobeIcon color="stroke-red-500" />,
+  },
+];
+
+export const contactLinks = [
+  {
+    label: "قنوات التواصل الاجتماعي",
+    content: <SocialMediaChannel />,
+  },
+  {
+    label: "للشكاوي والمقترحات",
+    content: <Complaints />,
   },
 ];
 

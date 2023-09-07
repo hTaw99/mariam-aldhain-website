@@ -28,7 +28,7 @@ export default function Qualifications() {
       {qualifications.map((event) => (
         <>
           {/* date */}
-          <div className="text-xl text-gold-500 font-semibold">
+          <div key={event.date} className="text-xl text-gold-500 font-semibold">
             {event.date}
           </div>
           {/* details */}

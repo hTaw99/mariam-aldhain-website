@@ -1,12 +1,9 @@
-"use client";
 import Image from "next/image";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from "react";
 import NavbarLinks from "@/components/NavbarLinks";
 import Sidebar from "@/layout/Sidebar";
+import HamburgerIcon from "@/components/HamburgerIcon";
 
 const Navbar = () => {
-  const [openSidebar, setOpenSidebar] = useState(false);
   return (
     <>
       <header className="border-b sticky top-0 z-40 bg-white ">
@@ -17,13 +14,9 @@ const Navbar = () => {
           <div className="hidden  md:inline-block">
             <NavbarLinks />
           </div>
-          <RxHamburgerMenu
-            onClick={() => setOpenSidebar(!openSidebar)}
-            size={26}
-            className="cursor-pointer text-gold-500 md:hidden"
-          />
+          <HamburgerIcon />
         </div>
-        <Sidebar openSidebar={openSidebar} />
+        <Sidebar />
       </header>
     </>
   );

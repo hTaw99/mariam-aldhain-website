@@ -1,3 +1,5 @@
+"use client";
+
 import NewsCardH from "@/components/NewsCardH";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,7 +42,7 @@ export default function Home() {
               height={1000}
               alt="hero"
               src="/heroImage.png"
-              className="object-cover lg:object-contain w-full h-full"
+              className="object-cover lg:object-contain w-full h-full "
             ></Image>
           </div>
         </div>
