@@ -10,7 +10,13 @@ const Footer = () => {
         <div className="grid sm:grid-cols-[2fr_1fr_1fr_1fr] pb-12 border-b border-white/20 mb-6 gap-8  ">
           <div className="">
             <div className="py-4">
-              <Image src="/logoForFooter.svg" width={120} height={120} alt="" />
+              <Image
+                src="/logoForFooter.svg"
+                className="w-auto h-auto"
+                width={120}
+                height={120}
+                alt=""
+              />
             </div>
             <p className="sm:w-3/4 text-sm sm:text-base leading-relaxed">
               باحثة ومحللة، حاصلة على دكتوراه في الاعلام والعلاقات الدولية،

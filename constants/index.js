@@ -11,6 +11,9 @@ import Languages from "@/components/Resume/Languages";
 import Qualifications from "@/components/Resume/Qualifications";
 import SocialMediaChannel from "@/components/SocialMediaChannel";
 
+// import SocialMediaIcon from "@/components/Icons/SocialMediaIcon";
+// import ComplainIcon from "@/assets/svgs/file-plus-02.svg";
+
 export const navigationLinks = [
   { label: "الرئيسية", path: "/" },
   { label: "السيرة الذاتية", path: "/resume" },
@@ -67,10 +70,12 @@ export const contactLinks = [
   {
     label: "قنوات التواصل الاجتماعي",
     content: <SocialMediaChannel />,
+    // icon: <SocialMediaIcon color="stroke-gray-500" />,
   },
   {
     label: "للشكاوي والمقترحات",
     content: <Complaints />,
+    // icon: <ComplainIcon/>,
   },
 ];
 

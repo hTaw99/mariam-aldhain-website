@@ -1,8 +1,6 @@
 export default function About() {
-
-  console.log("from about")
   return (
-    <p className="text-lg leading-relaxed">
+    <p className="text-lg leading-relaxed text-justify">
       شخصية نشيطة وطموحة مع نظرة ثاقبه حاملة لمؤهلات علمية وعملية حيث تنخرط في
       جميع الاعمال الفردية والاجتماعية تحب التميز وقيادة زملائها الى نجاح شعارها
       فريق متميز لوطنٍ واعد وليس هذا فحسب فإن الظاعن تتميز بالذكاء والحدة وتجيد

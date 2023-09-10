@@ -5,7 +5,7 @@ import React, { useRef, useState } from "react";
 
 export default function Collection() {
   const [openImage, setOpenImage] = useState(false);
-  const [photo, setPhoto] = useState("");
+  const [photoIdx, setPhotoIdx] = useState(0);
   return (
     <>
       <div className=" bg-gradient-to-b  from-gold-500 to-gold-400 py-8 md:py-16">
@@ -33,20 +33,20 @@ export default function Collection() {
           "/photo6.jpg",
           "/photo7.jpg",
           "/photo8.jpg",
-        ].map((el, i) => (
+        ].map((el, idx) => (
           <div
             key={el}
-            className={` ${i === 1 ? "  sm:col-span-2" : ""} ${
-              i === 3 ? "row-span-2 h-full" : "max-h-[400px]"
-            } ${i === 7 ? "col-span-2" : ""} overflow-hidden   rounded-md`}
+            className={` ${idx === 1 ? "  sm:col-span-2" : ""} ${
+              idx === 3 ? "row-span-2 h-full" : "max-h-[400px]"
+            } ${idx === 7 ? "col-span-2" : ""} overflow-hidden   rounded-md`}
           >
             <Image
               onClick={(e) => {
                 setOpenImage(true);
-                setPhoto(
-                  `/${e.target.currentSrc.split("%2F")[1].split("&")[0]}`
-                );
-                console.log(e.target.currentSrc.split("%2F")[1].split("&")[0]);
+                // setPhotoIdx(
+                //   `/${e.target.currentSrc.split("%2F")[1].split("&")[0]}`
+                // );
+                setPhotoIdx(idx);
               }}
               width={1000}
               quality={100}
@@ -59,7 +59,7 @@ export default function Collection() {
           </div>
         ))}
       </div>
-      {openImage && <ImageZoom setOpenImage={setOpenImage} src={photo} />}
+      {openImage && <ImageZoom setOpenImage={setOpenImage} photoIdx={photoIdx} />}
     </>
   );
 }

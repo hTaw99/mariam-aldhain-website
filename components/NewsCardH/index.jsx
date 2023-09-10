@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function NewsCardH() {
   return (
-    <div className=" p-4 grid grid-cols-[2fr_5fr] gap-4  border border-gray-200 rounded-md">
+    <div className=" p-4 grid grid-cols-[2fr_5fr] gap-4 bg-white  border border-gray-200 rounded-md">
       <div className=" h-auto   aspect-square  rounded-md overflow-hidden">
         <Image
           width={300}
           height={300}
           className="object-cover w-full h-full"
-          src="/resumePhoto.png"
+          src="/photo2.jpg"
           alt=""
         />
       </div>
@@ -25,8 +25,8 @@ export default function NewsCardH() {
           هنأ معالي السيد احمد بن سلمان المسلم رئيس مجلس النواب
         </Link>
         <p
-          style={{ fontSize: "clamp(0.85rem, 1.2vw ,1rem )" }}
-          className="line-clamp-1 sm:line-clamp-2 text-neutral-400"
+          style={{ fontSize: "clamp(0.7rem, 1.2vw ,0.85rem )" }}
+          className="line-clamp-1  sm:line-clamp-2 text-neutral-400"
         >
           هنأ معالي السيد احمد بن سلمان المسلم رئيس مجلس النواب، سمو الشيخ ناصر
           بن حمد آل خليفة ممثل جلالة

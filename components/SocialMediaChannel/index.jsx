@@ -1,14 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { BsFacebook, BsTwitter, BsWhatsapp, BsYoutube } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsWhatsapp,
+  BsFillTelephoneFill,
+} from "react-icons/bs";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaFacebookF } from "react-icons/fa";
 
 export default function SocialMediaChannel() {
   const socialMediaLinks = [
     {
       label: "تويتر",
       icon: (
-        <BsTwitter
+        <BsInstagram
           className="group-hover:text-red-500 transition-all duration-300"
           size={32}
         />
@@ -18,7 +25,18 @@ export default function SocialMediaChannel() {
     {
       label: "فيسبوك",
       icon: (
-        <BsFacebook
+        <FaFacebookF
+          className="group-hover:text-red-500 transition-all duration-300"
+          size={32}
+        />
+      ),
+      path: "#",
+    },
+
+    {
+      label: "واتساب",
+      icon: (
+        <BsWhatsapp
           className="group-hover:text-red-500 transition-all duration-300"
           size={32}
         />
@@ -28,7 +46,7 @@ export default function SocialMediaChannel() {
     {
       label: "يوتيوب",
       icon: (
-        <BsYoutube
+        <BiLogoGmail
           className="group-hover:text-red-500 transition-all duration-300"
           size={32}
         />
@@ -36,9 +54,9 @@ export default function SocialMediaChannel() {
       path: "#",
     },
     {
-      label: "واتساب",
+      label: "تليفون",
       icon: (
-        <BsWhatsapp
+        <BsFillTelephoneFill
           className="group-hover:text-red-500 transition-all duration-300"
           size={32}
         />
@@ -51,7 +69,7 @@ export default function SocialMediaChannel() {
       <h1 className="text-xl mb-2 font-bold border-r-4 border-red-500  pr-4 relative ">
         قنوات التواصل الاجتماعي
       </h1>
-      <p className="mr-4 mb-4 leading-relaxed">
+      <p className="mr-4 mb-4 leading-relaxed text-justify">
         من أجل التواصل المباشر مع الجمهور وإبراز إنجازات المجلس، وعرضها على
         المواطنين بكل شفافية، قامت الأمانة العامة بتوفير عدة قنوات تواصل
         اجتماعية من بينها: الأنستجرام، وتويتر وفيسبوك، على جانب برنامج المحادثة
@@ -65,7 +83,7 @@ export default function SocialMediaChannel() {
           <Link
             key={link.label}
             href={link.path}
-            className="group bg-gray-100 w-auto p-8 md:p-16 rounded-md"
+            className="group bg-gray-100 w-auto p-10 md:p-12 rounded-md"
           >
             {link.icon}
           </Link>

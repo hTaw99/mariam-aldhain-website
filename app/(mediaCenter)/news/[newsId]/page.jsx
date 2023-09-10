@@ -28,6 +28,7 @@ export default function page() {
             width={1000}
             height={1000}
             src="/photo6.jpg"
+            priority
             alt=""
           />
         </div>

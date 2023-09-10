@@ -1,6 +1,6 @@
 "use client";
 import { contactLinks } from "@/constants";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ContactUsPage = () => {
   const [contactInfo, setContactInfo] = useState(contactLinks[0]);
@@ -8,6 +8,7 @@ const ContactUsPage = () => {
     <div className="container md:grid md:grid-cols-[1fr_3fr]  py-12 gap-4">
       <ul className="col-start-1 mb-8 flex md:flex-col col-end-2 rounded-md border w-full h-min border-b-0 border-l-0 md:border-l ">
         {contactLinks.map((link) => (
+          
           <button
             onClick={() => setContactInfo(link)}
             key={link.label}
@@ -17,7 +18,7 @@ const ContactUsPage = () => {
                 : "text-base"
             } flex gap-2 items-center border-l md:border-l-0 hover:bg-gold-50 transition-all duration-300 font-semibold border-b w-full text-right p-4`}
           >
-            <div className="fill-current text-green-600">{link.icon}</div>
+            <div className=" text-gray-300">{link.icon}</div>
             {link.label}
           </button>
         ))}

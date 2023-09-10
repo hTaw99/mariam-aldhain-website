@@ -23,7 +23,7 @@ export default function NewsCard({ src }) {
         >
           هنأ معالي السيد احمد بن سلمان المسلم رئيس مجلس النواب
         </Link>
-        <p className="line-clamp-2 text-neutral-400 mb-4">
+        <p className="line-clamp-2 text-sm text-neutral-400 mb-4">
           هنأ معالي السيد احمد بن سلمان المسلم رئيس مجلس النواب، سمو الشيخ ناصر
           بن حمد آل خليفة ممثل جلالة الملك…
         </p>

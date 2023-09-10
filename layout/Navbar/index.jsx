@@ -9,7 +9,7 @@ const Navbar = () => {
       <header className="border-b sticky top-0 z-40 bg-white ">
         <div className="container flex items-center md:items-stretch justify-between ">
           <div className="py-4">
-            <Image src="/logo.svg" priority width={125} height={125} alt="" />
+            <Image src="/logo.svg" className="w-auto h-auto" priority width={125} height={125} alt="" />
           </div>
           <div className="hidden  md:inline-block">
             <NavbarLinks />

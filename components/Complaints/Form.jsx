@@ -18,7 +18,7 @@ export default function Form() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} action="">
-      <div className="grid grid-cols-2 gap-4 mb-4">
+      <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4 mb-4">
         <motion.div layout="position" className="flex flex-col gap-2">
           <label className="font-semibold" htmlFor="name">
             الإسم
@@ -51,7 +51,7 @@ export default function Form() {
             })}
             id="name"
             className="bg-gray-50  outline-0 rounded-md p-1 border border-gray-200"
-            type="text"
+            type="phone"
           />
           {errors?.phoneNumber?.message && (
             <motion.span

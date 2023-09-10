@@ -3,7 +3,6 @@ import { blocks } from "@/constants";
 import Image from "next/image";
 
 export default function ResumePage() {
-
   return (
     <div className="before:absolute before:-z-50 py-10 before:top-0 before:inset-x-0 before:h-[250px] before:bg-gradient-to-b before:from-gold-500 before:to-gold-400  grid container grid-cols-[1fr_3fr] grid-rows-[250px_min-content_1fr_1fr] gap-6 ">
       {/* Image */}
@@ -34,7 +33,7 @@ export default function ResumePage() {
         </ul>
       </div>
 
-      <ResumeListAndDetails/>
+      <ResumeListAndDetails />
     </div>
   );
 }
