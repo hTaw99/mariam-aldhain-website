@@ -50,9 +50,12 @@ const Footer = () => {
         </div>
         <div className="flex justify-between ">
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold text-white/70">
-              تصميم وتطوير الموقع شركة ايدنتــيــتي
-            </h1>
+            <div className="flex gap-2 items-center">
+              <h1 className="font-semibold text-white/70">
+                تصميم وتطوير الموقع شركة ايدنتــيــتي
+              </h1>
+              <Image src="identLogo.svg" alt="" width={125} height={125} />
+            </div>
             <p className="text-xs sm:text-sm text-white/50">
               جميع الحقوق محفوظة © 2023 لسيادة النائبة مريم الظاعن
             </p>

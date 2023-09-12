@@ -32,7 +32,7 @@ export default function page() {
             alt=""
           />
         </div>
-        <div className="text-base sm:text-lg relative before:content-[''] before:absolute before:-top-4 before:w-32  before:h-1 before:bg-red-500 ">
+        <div className="text-base sm:text-lg relative before:absolute before:-top-4 before:w-32  before:h-1 before:bg-red-500 ">
           <p className="leading-relaxed mb-4">
             لحضرة صاحب الجلالة الملك حمد بن عيسى آل خليفة ملك البلاد المعظم حفظه
             الله، وإلى صاحب السمو الملكي الأمير سلمان بن حمد آل خليفة ولي العهد

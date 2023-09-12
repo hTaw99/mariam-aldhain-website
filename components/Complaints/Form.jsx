@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm, SubmitHandler } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
-export default function Form() {
+export default function Form({ isHome }) {
   const {
     register,
     handleSubmit,
@@ -12,13 +12,11 @@ export default function Form() {
     formState: { errors },
   } = useForm();
   useFormPersist("complainForm", { watch, setValue });
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const onSubmit = (data) => {};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} action="">
-      <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4 mb-4">
+      <div className=" flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4 mb-4">
         <motion.div layout="position" className="flex flex-col gap-2">
           <label className="font-semibold" htmlFor="name">
             الإسم
@@ -26,7 +24,11 @@ export default function Form() {
           <input
             {...register("name", { required: "من فضلك ادخل الإسم" })}
             id="name"
-            className="bg-gray-50  outline-0 rounded-md p-1 border border-gray-200"
+            className={`${
+              isHome
+                ? "bg-gold-450 border-gold-350 "
+                : "bg-gray-50  border-gray-200"
+            }  outline-0 rounded-md p-1 border `}
             type="text"
           />
           {errors?.name?.message && (
@@ -50,7 +52,11 @@ export default function Form() {
               required: "من فضلك ادخل رقم الجوال",
             })}
             id="name"
-            className="bg-gray-50  outline-0 rounded-md p-1 border border-gray-200"
+            className={`${
+              isHome
+                ? "bg-gold-450 border-gold-350 "
+                : "bg-gray-50  border-gray-200"
+            }  outline-0 rounded-md p-1 border `}
             type="phone"
           />
           {errors?.phoneNumber?.message && (
@@ -74,7 +80,11 @@ export default function Form() {
               required: "من فضلك أدخل البريد الألكتروني",
             })}
             id="name"
-            className="bg-gray-50  outline-0 rounded-md p-1 border border-gray-200"
+            className={`${
+              isHome
+                ? "bg-gold-450 border-gold-350 "
+                : "bg-gray-50  border-gray-200"
+            }  outline-0 rounded-md p-1 border `}
             type="text"
           />
           {errors?.email?.message && (
@@ -98,7 +108,11 @@ export default function Form() {
               required: "من فضلك أدخل عنوان للمقترح",
             })}
             id="name"
-            className="bg-gray-50  outline-0 rounded-md p-1 border border-gray-200"
+            className={`${
+              isHome
+                ? "bg-gold-450 border-gold-350 "
+                : "bg-gray-50  border-gray-200"
+            }  outline-0 rounded-md p-1 border `}
             type="text"
           />
           {errors?.title?.message && (
@@ -126,7 +140,11 @@ export default function Form() {
               required: "من فضلك أدخل المقترح",
             })}
             id="name"
-            className="bg-gray-50  outline-0 rounded-md p-1 border border-gray-200"
+            className={`${
+              isHome
+                ? "bg-gold-450 border-gold-350 "
+                : "bg-gray-50  border-gray-200"
+            }  outline-0 rounded-md p-1 border `}
           />
           {errors?.complain?.message && (
             <motion.span

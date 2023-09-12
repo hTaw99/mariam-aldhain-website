@@ -19,7 +19,8 @@ function VideoPage() {
       </div>
 
       <div className="container py-6">
-        <p className="leading-relaxed  mb-4">
+        <Video />
+        <p className="leading-relaxed relative  mb-4 before:absolute before:-top-4 before:w-32  before:h-1 before:bg-red-500">
           شريكًا فاعلاً في مسيرة البناء والتنمية الشاملة.واشادت الظاعن بجهود
           المجلس برئاسة صاحبة السمو الملكي الأميرة سبيكة بنت إبراهيم آل خليفة،
           والذي أسهم ومن خلال مبادرته الوطنية من تقدم المرأة البحرينية ومساعدتها
@@ -27,7 +28,6 @@ function VideoPage() {
           والبناء مع الرجل يدا بيد في ظل المسيرة التنموية الزاخرة والحافلة
           بالمكتسبات.وأضافت حقق
         </p>
-        <Video />
       </div>
     </>
   );

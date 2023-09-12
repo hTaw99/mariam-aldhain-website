@@ -37,15 +37,15 @@ export default function Video() {
         <source src="/video.mp4" type="video/mp4" />
       </video>
       {showReplayIcon && (
-        <MdReplay
+        <div
           onClick={() => {
             setShowReplayIcon(false);
             setIsPlaying(!isPlaying);
           }}
-          size={32}
-          color="white"
-          className="absolute top-1/2 -translate-y-1/2"
-        />
+          className="absolute top-1/2 p-2 cursor-pointer bg-gold-500 border border-white/25 rounded-full -translate-y-1/2"
+        >
+          <MdReplay size={32} color="white" className="" />
+        </div>
       )}
       {/* ################### Controlrs ##################### */}
       <div

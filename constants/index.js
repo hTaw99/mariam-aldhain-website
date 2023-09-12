@@ -1,9 +1,4 @@
 import Complaints from "@/components/Complaints";
-import BriefcaseIcon from "@/components/Icons/Briefcase";
-import CertificateIcon from "@/components/Icons/Certificate";
-import FileIcon from "@/components/Icons/File";
-import GlobeIcon from "@/components/Icons/Globe";
-import UserSquereIcon from "@/components/Icons/UserSquere";
 import About from "@/components/Resume/About";
 import Certificates from "@/components/Resume/Certificates";
 import Experiences from "@/components/Resume/Experiences";
@@ -11,8 +6,16 @@ import Languages from "@/components/Resume/Languages";
 import Qualifications from "@/components/Resume/Qualifications";
 import SocialMediaChannel from "@/components/SocialMediaChannel";
 
-// import SocialMediaIcon from "@/components/Icons/SocialMediaIcon";
-// import ComplainIcon from "@/assets/svgs/file-plus-02.svg";
+import BriefcaseIcon from "@/assets/icons/briefcase-01.svg";
+import GlobeIcon from "@/assets/icons/globe-02.svg";
+import CertificateIcon from "@/assets/icons/certificate-01.svg";
+import FileIcon from "@/assets/icons/file-02.svg";
+import UserSquereIcon from "@/assets/icons/user-square.svg";
+import SocialMediaIcon from "@/assets/icons/social-media.svg";
+import ComplainIcon from "@/assets/icons/file-plus-02.svg";
+import NewsIcon from "@/assets/icons/line-chart-up-03.svg";
+import GalleryIcon from "@/assets/icons/image-03.svg";
+import VisualsIcon from "@/assets/icons/video-recorder.svg";
 
 export const navigationLinks = [
   { label: "الرئيسية", path: "/" },
@@ -32,37 +35,37 @@ export const navigationLinks = [
 export const mediaCenterLinks = {
   name: "المركز الإعلامي",
   list: [
-    { label: "الأخبار", path: "/news" },
-    { label: "معرض الصور", path: "/gallery" },
-    { label: "المرئيات", path: "/visuals" },
-    { label: "الملفات", path: "/files" },
+    { label: "الأخبار", path: "/news", icon: <NewsIcon /> },
+    { label: "معرض الصور", path: "/gallery", icon: <GalleryIcon /> },
+    { label: "المرئيات", path: "/visuals", icon: <VisualsIcon /> },
+    { label: "الملفات", path: "/files", icon: <FileIcon /> },
   ],
 };
 export const resumeLinks = [
   {
     label: "عن د. مريم الظاعن",
     content: <About />,
-    icon: <UserSquereIcon color="stroke-red-500" />,
+    icon: <UserSquereIcon />,
   },
   {
     label: "المؤهلات العلمية",
     content: <Qualifications />,
-    icon: <FileIcon color="stroke-red-500" />,
+    icon: <FileIcon />,
   },
   {
     label: "الشهادات العلمية الاحترافية",
     content: <Certificates />,
-    icon: <CertificateIcon color="stroke-red-500" />,
+    icon: <CertificateIcon />,
   },
   {
     label: "الخبرات العملية",
     content: <Experiences />,
-    icon: <BriefcaseIcon color="stroke-red-500" />,
+    icon: <BriefcaseIcon />,
   },
   {
     label: "اللغات",
     content: <Languages />,
-    icon: <GlobeIcon color="stroke-red-500" />,
+    icon: <GlobeIcon />,
   },
 ];
 
@@ -70,12 +73,12 @@ export const contactLinks = [
   {
     label: "قنوات التواصل الاجتماعي",
     content: <SocialMediaChannel />,
-    // icon: <SocialMediaIcon color="stroke-gray-500" />,
+    icon: <SocialMediaIcon />,
   },
   {
     label: "للشكاوي والمقترحات",
     content: <Complaints />,
-    // icon: <ComplainIcon/>,
+    icon: <ComplainIcon />,
   },
 ];
 

@@ -20,7 +20,7 @@ export default function ImageZoom({ photoIdx, setOpenImage }) {
       {createPortal(
         <div className="">
           <div className="w-full h-screen fixed inset-0  bg-neutral-900/80 z-[50]" />
-          <figure className=" w-full h-auto m-auto fixed inset-0  flex justify-center items-center z-[100] ">
+          <figure className=" w-full h-auto m-auto fixed inset-0 flex flex-col xl:flex-row justify-center items-center z-[100] ">
             <PiCaretCircleRightBold
               size={32}
               onClick={() =>
@@ -53,7 +53,7 @@ export default function ImageZoom({ photoIdx, setOpenImage }) {
           <AiOutlineCloseCircle
             size={32}
             onClick={() => setOpenImage(false)}
-            className="absolute top-12 right-12 z-[100] text-white cursor-pointer"
+            className="fixed top-12 right-12 z-[100] text-white cursor-pointer"
           />
         </div>,
         document.body
