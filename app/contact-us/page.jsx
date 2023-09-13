@@ -8,7 +8,6 @@ const ContactUsPage = () => {
     <div className="container md:grid md:grid-cols-[1fr_3fr]  py-12 gap-4">
       <ul className="col-start-1 mb-8 flex md:flex-col col-end-2 rounded-md border w-full h-min border-b-0 border-l-0 md:border-l ">
         {contactLinks.map((link) => (
-          
           <button
             onClick={() => setContactInfo(link)}
             key={link.label}
@@ -16,9 +15,18 @@ const ContactUsPage = () => {
               contactInfo.label === link.label
                 ? "text-lg md:text-xl text-gold-500 py-6 border-b-4 border-b-gold-500 md:border-b md:border-b-gray-200 md:border-r-4 md:border-r-gold-500"
                 : "text-base"
-            } flex gap-2 items-center border-l md:border-l-0 hover:bg-gold-50 transition-all duration-300 font-semibold border-b w-full text-right p-4`}
+            } flex gap-2 items-center  border-l md:border-l-0 hover:bg-gold-50 transition-all duration-300 font-semibold border-b w-full text-right p-4`}
           >
-            <div className=" text-gray-300">{link.icon}</div>
+            {link.icon}
+            {/* <span
+              className={`${
+                contactInfo.label === link.label
+                  ? " md:text-xl text-gold-500  "
+                  : ""
+              } text-black`}
+            >
+              {link.label}
+            </span> */}
             {link.label}
           </button>
         ))}

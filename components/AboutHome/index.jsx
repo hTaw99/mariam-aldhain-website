@@ -5,9 +5,6 @@ import React from "react";
 export default function AboutHome() {
   return (
     <>
-      <h1 className="text-xl mb-8 font-bold border-r-4 border-red-500  pr-4 relative ">
-        عن النائب
-      </h1>
       <div className="flex flex-col justify-center  lg:grid lg:grid-cols-[1fr_4fr] gap-8">
         <div className=" bg-gold-500 mb-4 aspect-square p-2  rounded-md max-h-[300px]">
           <Image

@@ -17,6 +17,8 @@ import NewsIcon from "@/assets/icons/line-chart-up-03.svg";
 import GalleryIcon from "@/assets/icons/image-03.svg";
 import VisualsIcon from "@/assets/icons/video-recorder.svg";
 
+console.log();
+
 export const navigationLinks = [
   { label: "الرئيسية", path: "/" },
   { label: "السيرة الذاتية", path: "/resume" },

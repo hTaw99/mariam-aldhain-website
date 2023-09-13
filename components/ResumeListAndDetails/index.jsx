@@ -17,7 +17,7 @@ export default function ResumeListAndDetails() {
                 : "text-base"
             } flex gap-2 items-center hover:bg-gold-50 transition-all duration-300 font-semibold border-b w-full text-right p-4`}
           >
-            <div className="fill-current text-green-600">{link.icon}</div>
+            {link.icon}
             {link.label}
           </button>
         ))}

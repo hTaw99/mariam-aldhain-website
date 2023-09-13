@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <AppProvider>
           <Topbar />
           <Navbar />
-          <main className="min-h-screen relative">{children}</main>
+          <main className="min-h-[calc(100vh-135px-427px)] relative ">{children}</main>
           <Footer />
         </AppProvider>
       </body>
