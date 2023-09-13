@@ -16,6 +16,9 @@ import ComplainIcon from "@/assets/icons/file-plus-02.svg";
 import NewsIcon from "@/assets/icons/line-chart-up-03.svg";
 import GalleryIcon from "@/assets/icons/image-03.svg";
 import VisualsIcon from "@/assets/icons/video-recorder.svg";
+import { BsFillTelephoneFill, BsInstagram, BsWhatsapp } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
 console.log();
 
@@ -90,7 +93,7 @@ export const footerLinks = [
     list: [
       { label: "الرئيسية", path: "/" },
       { label: "السيرة الذاتية", path: "/resume" },
-      { label: "الشكاوي والمقترحات", path: "/contact-us" },
+      { label: "الشكاوي والمقترحات", path: "/contact-us?complain=true" },
     ],
   },
   {
@@ -105,12 +108,43 @@ export const footerLinks = [
   {
     name: "روابط ذات صلة",
     list: [
-      { label: "مجلس النواب – مملكة البحرين ", path: "#" },
-      { label: "مجلس الشورى – مملكة البحرين ", path: "#" },
-      { label: "وزارة شؤون مجلسي الشورى والنواب ", path: "#" },
-      { label: "هيئة المعلومات والحكومة الإلكترونية ", path: "#" },
+      { label: "مجلس النواب – مملكة البحرين ", path: "https://www.nuwab.bh/" },
+      {
+        label: "مجلس الشورى – مملكة البحرين ",
+        path: "https://www.shura.bh/ar/pages/default.aspx",
+      },
+      { label: "وزارة شؤون مجلسي الشورى والنواب ", path: "https://mopa.gov.bh/" },
+      { label: "هيئة المعلومات والحكومة الإلكترونية ", path: "https://www.iga.gov.bh/" },
     ],
   },
 ];
 
 export const blocks = ["809", "812", "813", "814", "840"];
+
+export const socialMediaLinks = [
+  {
+    label: "انسجرام",
+    icon: <BsInstagram />,
+    path: "https://www.instagram.com/dr.maryam.aldhain/",
+  },
+  {
+    label: "واتساب",
+    icon: <BsWhatsapp />,
+    path: "#",
+  },
+  {
+    label: "فيسبوك",
+    icon: <FaFacebookF />,
+    path: "https://www.facebook.com/profile.php?id=100086536484922",
+  },
+  {
+    label: "ايميل",
+    icon: <BiLogoGmail />,
+    path: "#",
+  },
+  {
+    label: "تليفون",
+    icon: <BsFillTelephoneFill />,
+    path: "#",
+  },
+];

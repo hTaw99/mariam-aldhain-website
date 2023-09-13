@@ -1,9 +1,15 @@
 "use client";
 import { contactLinks } from "@/constants";
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 const ContactUsPage = () => {
-  const [contactInfo, setContactInfo] = useState(contactLinks[0]);
+  const search = useSearchParams();
+  search.get("complain");
+  const [contactInfo, setContactInfo] = useState(
+    search.get("complain") ? contactLinks[1] : contactLinks[0]
+  );
+
   return (
     <div className="container md:grid md:grid-cols-[1fr_3fr]  py-12 gap-4">
       <ul className="col-start-1 mb-8 flex md:flex-col col-end-2 rounded-md border w-full h-min border-b-0 border-l-0 md:border-l ">
@@ -18,15 +24,6 @@ const ContactUsPage = () => {
             } flex gap-2 items-center border-l md:border-l-0 hover:bg-gold-50 transition-all duration-300 font-semibold border-b w-full text-right p-4`}
           >
             {link.icon}
-            {/* <span
-              className={`${
-                contactInfo.label === link.label
-                  ? " md:text-xl text-gold-500  "
-                  : ""
-              } text-black`}
-            >
-              {link.label}
-            </span> */}
             {link.label}
           </button>
         ))}

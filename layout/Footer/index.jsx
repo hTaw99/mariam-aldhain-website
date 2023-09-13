@@ -1,5 +1,5 @@
 import ComplainHome from "@/components/ComplainHome";
-import { footerLinks } from "@/constants";
+import { footerLinks, socialMediaLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -32,7 +32,7 @@ const Footer = () => {
           {footerLinks.map((column, i) => (
             <div key={i} className="">
               <h1 className="text-base sm:text-lg text-gold-500 font-semibold">
-                {column.name}{" "}
+                {column.name}
                 <span className="mt-2 mb-4 block w-10 h-[1px] bg-gold-500"></span>{" "}
               </h1>
 
@@ -40,6 +40,7 @@ const Footer = () => {
                 {column.list.map((link) => (
                   <li key={link.label} className="inline-block">
                     <Link
+                      target={i === 2 ? "_blank" : "_self"}
                       className="text-sm sm:text-base hover:text-red-300 hover:-translate-x-2 inline-block transition-all duration-300"
                       href={link.path}
                     >
@@ -55,10 +56,10 @@ const Footer = () => {
         <div className="flex justify-between items-end ">
           <div className="flex flex-col gap-2">
             {/* <div className="flex gap-2 items-center"> */}
-              <h1 className="font-semibold text-white/70">
-                تصميم وتطوير الموقع شركة ايدنتــيــتي
-                <IdentLogo className="w-24 sm:w-32 text-white/70 inline" />
-              </h1>
+            <h1 className="font-semibold text-white/70">
+              تصميم وتطوير الموقع شركة ايدنتــيــتي
+              <IdentLogo className="w-24 sm:w-32 text-white/70 inline" />
+            </h1>
             {/* </div> */}
             <p className="text-xs sm:text-sm text-white/50">
               جميع الحقوق محفوظة © 2023 لسيادة النائبة مريم الظاعن
@@ -66,25 +67,16 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-2 items-end">
             <div className="flex items-center gap-2 text-white/40">
-              <Link
-                href="#"
-                className="hover:text-gold-500 transition-all duration-300"
-              >
-                <BsInstagram />
-              </Link>
-              <Link
-                href="#"
-                className="hover:text-gold-500 transition-all duration-300"
-              >
-                <BsWhatsapp />
-              </Link>
-
-              <Link
-                href="#"
-                className="hover:text-gold-500 transition-all duration-300"
-              >
-                <FaFacebookF />
-              </Link>
+              {socialMediaLinks.slice(0, 3).map((link) => (
+                <Link
+                  target="_blank"
+                  key={link.label}
+                  href={link.path}
+                  className="hover:text-gold-500 transition-all duration-300 "
+                >
+                  {link.icon}
+                </Link>
+              ))}
             </div>
             <Link
               href="/#"

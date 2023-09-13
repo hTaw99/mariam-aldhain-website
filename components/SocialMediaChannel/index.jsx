@@ -1,69 +1,7 @@
-"use client";
-
+import { socialMediaLinks } from "@/constants";
 import Link from "next/link";
-import {
-  BsFacebook,
-  BsInstagram,
-  BsWhatsapp,
-  BsFillTelephoneFill,
-} from "react-icons/bs";
-import { BiLogoGmail } from "react-icons/bi";
-import { FaFacebookF } from "react-icons/fa";
 
 export default function SocialMediaChannel() {
-  const socialMediaLinks = [
-    {
-      label: "تويتر",
-      icon: (
-        <BsInstagram
-          className="group-hover:text-red-500 transition-all duration-300"
-          size={32}
-        />
-      ),
-      path: "#",
-    },
-    {
-      label: "فيسبوك",
-      icon: (
-        <FaFacebookF
-          className="group-hover:text-red-500 transition-all duration-300"
-          size={32}
-        />
-      ),
-      path: "#",
-    },
-
-    {
-      label: "واتساب",
-      icon: (
-        <BsWhatsapp
-          className="group-hover:text-red-500 transition-all duration-300"
-          size={32}
-        />
-      ),
-      path: "#",
-    },
-    {
-      label: "يوتيوب",
-      icon: (
-        <BiLogoGmail
-          className="group-hover:text-red-500 transition-all duration-300"
-          size={32}
-        />
-      ),
-      path: "#",
-    },
-    {
-      label: "تليفون",
-      icon: (
-        <BsFillTelephoneFill
-          className="group-hover:text-red-500 transition-all duration-300"
-          size={32}
-        />
-      ),
-      path: "#",
-    },
-  ];
   return (
     <div>
       <h1 className="text-xl mb-2 font-bold border-r-4 border-red-500  pr-4 relative ">
@@ -81,9 +19,10 @@ export default function SocialMediaChannel() {
       <div className="flex flex-wrap gap-4 mr-4 items-center">
         {socialMediaLinks.map((link) => (
           <Link
+            target="_blank"
             key={link.label}
             href={link.path}
-            className="group bg-gray-100 w-auto p-10 md:p-12 rounded-md"
+            className="text-3xl hover:text-gold-500 transition-all duration-300 bg-gray-100 w-auto p-10 md:p-12 rounded-md"
           >
             {link.icon}
           </Link>

@@ -12,7 +12,7 @@ export default function MediaCenterLayout({ children, params }) {
     return <div>{children}</div>;
   } else {
     return (
-      <div className="min-h-screen bg-neutral-100 ">
+      <div className="min-h-[calc(100vh-135px-427px)] bg-neutral-100 ">
         <div className="container py-8 sm:py-16 grid sm:grid-cols-[1fr_3fr] gap-6">
           {/* Links */}
           <ul className="rounded-md border-b-0 border-l-0 grid grid-cols-2 overflow-x-auto items-center justify-between text-center sm:text-start sm:block border sm:border-b-0 bg-white">

@@ -53,9 +53,9 @@ export default function Video() {
           showPlayback
             ? "opacity-1 translate-y-0"
             : "opacity-0 translate-y-full"
-        } flex justify-center items-center absolute transition-all duration-300 rounded-t-lg bottom-0 h-20 bg-black inset-x-0 text-white py-2 px-6`}
+        } flex justify-between items-center absolute transition-all duration-300 rounded-t-lg bottom-0 h-20 bg-black inset-x-0 text-white py-2 px-6`}
       >
-        <div className="flex items-center justify-between gap-2 w-1/3 mx-auto">
+        <div className="flex items-center justify-between gap-2  ">
           <h1 className="text-sm text-neutral-400">
             {`${Math.trunc(currentTime / 60)}:${((currentTime / 60) % 1)
               .toFixed(2)
@@ -70,7 +70,7 @@ export default function Video() {
             onInput={(e) => {
               setRangeValue(e.target.value);
             }}
-            className="h-1 accent-red-500 focus:accent-red-500 w-[500px] bg-white rounded-lg "
+            className="h-1 accent-red-500 focus:accent-red-500 w-auto bg-white rounded-lg "
           />
           <h1 className="text-sm text-neutral-400">
             {`${Math.trunc(videoRef?.current?.duration / 60)}:${(
