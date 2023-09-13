@@ -25,7 +25,7 @@ export default function AboutHome() {
                 عضو مجلس النواب البحريني . المحافظة الجنوبية - الدائرة الثانية
               </h1>
             </div>
-            <ul className="flex gap-2 items-center mb-4">
+            <ul className="flex flex-wrap gap-2 items-center mb-4">
               {blocks.map((b) => (
                 <li
                   className="text-red-00 px-4 sm:px-6 py-1 rounded-full border border-gold-400"

@@ -11,9 +11,9 @@ export default function LinkActiveClient({ link }) {
         href={link.path}
         className={`${
           pathname === link.path
-            ? "text-base sm:text-lg md:text-xl text-gold-500 border-b-4 border-b-gold-500 sm:border-b-gray-200 sm:py-6 sm:border-r-4 sm:border-r-gold-500"
-            : "text-base"
-        } hover:bg-gold-50 flex gap-2 transition-all w-full  duration-300 font-semibold border-l sm:border-b  p-4`}
+            ? "text-base sm:text-lg md:text-xl text-gold-500 border-b-4 sm:border-b border-b-gold-500 sm:border-b-gray-200 sm:py-6 sm:border-r-4 sm:border-r-gold-500"
+            : "text-base border-b"
+        } hover:bg-gold-50 flex gap-2  transition-all w-full  duration-300 font-semibold border-l  p-4`}
       >
         {link.icon}
         {link.label}

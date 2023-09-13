@@ -13,9 +13,9 @@ const ContactUsPage = () => {
             key={link.label}
             className={` ${
               contactInfo.label === link.label
-                ? "text-lg md:text-xl text-gold-500 py-6 border-b-4 border-b-gold-500 md:border-b md:border-b-gray-200 md:border-r-4 md:border-r-gold-500"
-                : "text-base"
-            } flex gap-2 items-center  border-l md:border-l-0 hover:bg-gold-50 transition-all duration-300 font-semibold border-b w-full text-right p-4`}
+                ? "text-base md:text-xl text-gold-500 py-6 border-b-4 border-b-gold-500 md:border-b md:border-b-gray-200 md:border-r-4 md:border-r-gold-500"
+                : "text-sm sm:text-base"
+            } flex gap-2 items-center border-l md:border-l-0 hover:bg-gold-50 transition-all duration-300 font-semibold border-b w-full text-right p-4`}
           >
             {link.icon}
             {/* <span
