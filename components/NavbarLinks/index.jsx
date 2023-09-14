@@ -12,7 +12,7 @@ export default function NavbarLinks() {
         link.path ? (
           <li
             key={link.label}
-            className=" bg-gold-450 rounded-md py-4 px-2 ------ md:py-0 md:px-0 md:bg-white ----- hover:text-red-500 transition-all duration-300"
+            className=" bg-gold-450 rounded-md py-4 px-2 ------ md:py-0 md:px-0 md:bg-transparent ----- hover:text-red-500 transition-all duration-300"
           >
             <Link onClick={() => dispatch("CLOSE_SIDEBAR")} href={link.path}>
               {link.label}

@@ -13,7 +13,7 @@ export default function MediaCenterLink({ link, children }) {
       key={link.label}
       onClick={() => setOpenMenu(!openMenu)}
       onMouseLeave={() => setOpenMenu(false)}
-      className=" h-full  bg-gold-450 rounded-md py-4 px-4 -----  md:py-0 md:px-0 md:bg-white relative md:flex md:items-center md:justify-between gap-1"
+      className=" h-full  bg-gold-450 rounded-md py-4 px-4 -----  md:py-0 md:px-0 md:bg-transparent relative md:flex md:items-center md:justify-between gap-1"
     >
       <span
         // onMouseEnter={() => setOpenMenu(true)}

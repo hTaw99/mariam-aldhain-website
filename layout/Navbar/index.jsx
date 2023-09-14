@@ -6,7 +6,7 @@ import HamburgerIcon from "@/components/HamburgerIcon";
 const Navbar = () => {
   return (
     <>
-      <header className="border-b sticky top-0 z-40 bg-white ">
+      <header className="border-b sticky top-0 z-40 bg-white/70 backdrop-blur-xl ">
         <div className="container flex items-center md:items-stretch justify-between ">
           <div className="py-4">
             <Image src="/logo.svg" className="w-auto h-auto" priority width={125} height={125} alt="" />

@@ -37,10 +37,6 @@ export default function Experiences() {
         "التواصل مع السلطات البحرينية بخصوص مسائل الأمن والبروتوكولات والشؤون الإدارية والقنصليّة",
         "متابعة وضع الأجانب في البحرين من حيث الأمن والقواعد واللوائح والممارسات المحلية وتقديم تقارير بها",
         "متابعة الشؤون القانونية في البحرين والقوانين ذات الصلة مثل قوانين العمالة والشؤون الاجتماعية والأحوال المدنية وتقديم تقارير بها.",
-        "متابعة الحقيبة الدبلوماسية والتنسيق بين الجهات الحكومة البحرينية والدولية.",
-        "تحمل مسؤولية الحفاظ على ممتلكات السفارة، مثل أعمال الصيانة وأعمال الترميم وغيرها من الأعمال بما في ذلك الإشراف على موظفي الصيانة.",
-        "ترجمة الوثائق وتقديم التفسيرات المهنية.",
-        "متابعة الصحف اليومية العربية وتقديم تقارير بها بالتعاون مع المستشار السياسي",
       ],
     },
   ];
@@ -49,19 +45,20 @@ export default function Experiences() {
 
   return (
     <LayoutGroup>
-      <div className="grid grid-cols-[1fr_auto_1fr] gap-8 flow">
+      <div className="flex flex-col sm:grid sm:grid-cols-[1fr_auto_1fr] gap-6">
         {/* ############### */}
         {experiences.map((ex, idx, arr) => {
           const isOdd = (idx + 1) % 2 !== 0;
           return <ExperienceCard key={ex.date} ex={ex} isOdd={isOdd} />;
         })}
         {/* ############### */}
+
         <motion.div
           layout="preserve-aspect"
           style={{
             gridRow: `1/${experiencesLength + 1}`,
           }}
-          className={`-z-50 col-start-2 w-[2px] bg-gray-200`}
+          className={`hidden sm:block -z-50 col-start-1 sm:col-start-2 w-[2px] bg-gray-200`}
         />
       </div>
     </LayoutGroup>

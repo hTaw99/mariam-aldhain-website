@@ -26,15 +26,18 @@ export default function Certificates() {
       {certificates.map((event) => (
         <>
           {/* date */}
-          <div key={event.date} className="text-xl text-gold-500 font-semibold">
+          <div
+            key={event.date}
+            className=" text-base sm:text-xl text-gold-500 font-semibold"
+          >
             {event.date}
           </div>
           {/* details */}
           <div className=" flex flex-col gap-2">
-            <h1 className="text-red-500 text-xl font-semibold">
+            <h1 className="text-base sm:text-xl text-red-500  font-semibold">
               {event.certificate}
             </h1>
-            <p className="italic text-lg">{event.university}</p>
+            <p className="italic text-sm sm:text-base">{event.university}</p>
           </div>
         </>
       ))}

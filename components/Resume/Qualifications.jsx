@@ -28,15 +28,15 @@ export default function Qualifications() {
       {qualifications.map((event) => (
         <>
           {/* date */}
-          <div key={event.date} className="text-xl text-gold-500 font-semibold">
+          <div key={event.date} className="text-base sm:text-xl text-gold-500 font-semibold">
             {event.date}
           </div>
           {/* details */}
           <div className=" flex flex-col gap-2">
-            <h1 className="text-red-500 text-xl font-semibold">
+            <h1 className="text-base sm:text-xl text-red-500 font-semibold">
               {event.university}
             </h1>
-            <div className="text-lg font-medium">
+            <div className="text-sm sm:text-base font-medium">
               {event.details.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
