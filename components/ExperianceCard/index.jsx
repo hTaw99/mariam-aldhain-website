@@ -22,7 +22,7 @@ export default function ExperienceCard({ isOdd, ex }) {
           layout="position"
           className={`text-lg text-gold-500 relative font-semibold  ---- ${
             isOdd ? "sm:after:-end-9" : " sm:after:-start-9"
-          }  after:absolute shrink-0 after:w-5 after:h-5 sm:after:w-6 sm:after:h-6  after:bg-gold-500 after:rounded-full after:border-4 ----`}
+          } after:hidden sm:after:block after:top-0 sm:after after:absolute shrink-0 after:w-5 after:h-5 sm:after:w-6 sm:after:h-6  after:bg-gold-500 after:rounded-full after:border-4 ----`}
         >
           {ex.date}
         </motion.span>
