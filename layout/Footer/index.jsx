@@ -1,10 +1,6 @@
-import ComplainHome from "@/components/ComplainHome";
 import { footerLinks, socialMediaLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { BsInstagram, BsWhatsapp } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
 import IdentLogo from "@/assets/icons/identLogo.svg";
 
 const Footer = () => {

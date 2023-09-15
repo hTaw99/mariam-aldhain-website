@@ -13,7 +13,7 @@ export default function Sidebar() {
         isSidebarOpen
           ? "visible pointer-events-auto"
           : "invisible pointer-events-none translate-x-full"
-      } transition-all duration-300 text-white absolute py-8 px-4 start-0 z-[10000] h-screen w-1/2 bg-gold-500`}
+      } transition-all duration-300 text-white absolute py-8 px-4 start-0 z-[10000] h-screen w-full bg-gold-500`}
     >
       <h1 className="mb-4 text-white/50">القائمة</h1>
       <NavbarLinks />
